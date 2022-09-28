@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#submit-btn:hover{
+    background-color: #09D3FB;
+    color: white;
+}
+#deleteAll:hover{
+    background-color: rgb(255, 69, 69);
+    color: white;
+}
