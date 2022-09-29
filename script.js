@@ -1,6 +1,8 @@
 // define all UI element. and add event listener.
 let form  = document.getElementById('inputBook');
 form.addEventListener('submit', addedNewBook);
+let singleBook = document.getElementById('all-books');
+singleBook.addEventListener('click', removeSingleBook);
 let deleteAll = document.getElementById('deleteAll');
 deleteAll.addEventListener('click', clearAll)
 // creating Object class or object method
@@ -42,6 +44,13 @@ function addedNewBook(element){
     element.preventDefault();
     ui.clearfields();
 };
+function removeSingleBook(e){
+    if(e.target.hasAttribute('href')){
+        let item = e.target.parentNode.parentNode;
+        item.remove();
+    };
+    e.preventDefault();
+};   
 function clearAll(){
     if(confirm(' Are you sure ? ')){
         let all = document.getElementById('all-books');
